@@ -1,0 +1,185 @@
+{
+    "shop": {
+        "name": "Knfapp",
+        "currency": "CNY",
+        "language": "cn",
+        "weightUnit": "kg",
+        "homeUrl": "http://localhost:3000"
+    },
+    "catalog": {
+        "product": {
+        "image": {
+            "thumbnail": {
+                "width": 100,
+                "height": 100
+            },
+            "listing": {
+                "width": 200,
+                "height": 200
+            },
+            "single": {
+                "width": 300,
+                "height": 300
+            }
+        }
+        },
+        "showOutOfStockProduct": false
+    },
+    "pricing": {
+        "rounding": "round",
+        "precision": 2,
+        "tax": {
+            "rounding": "round",
+            "round_level": "unit",
+            "price_including_tax": true
+        }
+    },
+    "themeConfig": {
+        "logo": {
+            "alt": "You amazing shop logo",
+            "src": "/logo.png",
+            "width": 100,
+            "height": 100
+        },
+        "headTags": {
+            "scripts": [
+                {
+                "src": "/custom.js",
+                "async": true
+                }
+            ],
+            "links": [
+                {
+                "rel": "stylesheet",
+                "href": "/custom.css"
+                }
+            ]
+        },
+        "copyRight": "© 2025 Knfapp. All Rights Reserved."
+    },
+
+    "dependencies": {
+        "@evershop/evershop": "1.2.1"
+    },
+
+    "customer": {
+        "addressSchema": {
+        "type": "object",
+        "properties": {
+                "full_name": {
+                "type": "string"
+                },
+                "telephone": {
+                "type": ["string", "number"]
+                },
+                "address_1": {
+                "type": "string"
+                },
+                "address_2": {
+                "type": "string"
+                },
+                "city": {
+                "type": "string"
+                },
+                "province": {
+                "type": "string"
+                },
+                "country": {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+                },
+                "postcode": {
+                "type": ["string", "number"]
+                }
+            }
+        }
+    },
+    "required": [
+        "full_name",
+        "telephone"
+        // "address_1",
+        // "city",
+        // "country",
+        // "province",
+        // "postcode"
+    ],
+    "errorMessage": {
+        "properties": {
+        "full_name": "translate('Full name is required')",
+        "telephone": "translate('Telephone is missing or invalid')"
+        // "address_1": "translate('Address is missing or invalid')",
+        // "province": "translate('Province is missing or invalid')",
+        // "postcode": "translate('Postcode is missing or invalid')",
+        // "country": "translate('Country is missing or invalid')"
+        }
+    },
+    "additionalProperties": true,
+    "system": {
+        "theme": "eve",
+        "extensions": [
+        {
+            "name": "product_review",
+            "resolve": "node_modules/@evershop/product_review",
+            "enabled": true,
+            "priority": 10
+        },
+        {
+            "name": "resend",
+            "resolve": "node_modules/@evershop/resend",
+            "enabled": true,
+            "priority": 10
+        },
+        {
+            "name": "google_login",
+            "resolve": "node_modules/@evershop/google_login",
+            "enabled": true,
+            "priority": 10
+        },
+        {
+            "name": "EverShopTidioWidget",
+            "resolve": "node_modules/evershop_tidio_widget",
+            "enabled": true,
+            "priority": 20
+        },
+        {
+            "name": "alipay",
+            "resolve": "extensions/alipay",
+            "enabled": true,
+            "priority": 10
+        },
+        {
+            "name": "subscriptions",
+            "resolve": "extensions/subscriptions",
+            "enabled": true,
+            "priority": 30
+        }
+
+    ]
+    },
+    "google_login": {
+        "client_id": "YOUR_GOOGLE_CLIENT_ID",
+        "client_secret": "YOUR_GOOGLE_CLIENT_SECRET",
+        "success_redirect_url": "http://localhost:3000",
+        "failure_redirect_url": "http://localhost:3000/account/login"
+    },
+    "resend": {
+        "from": "Customer Service <Your email>",
+        "events": {
+        "order_placed": {
+            "subject": "Order Confirmation",
+            "enabled": true,
+            "templatePath": "config/emails/order_confirmation.html" 
+        },
+        "reset_password": {
+            "subject": "Reset Password",
+            "enabled": true,
+            "templatePath": "config/emails/reset_password.html" 
+        },
+        "customer_registered": {
+            "subject": "Welcome to Knfapp",
+            "enabled": true,
+            "templatePath": "config/emails/welcome.html"
+        }
+        }
+    }
+}

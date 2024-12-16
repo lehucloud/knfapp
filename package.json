@@ -1,0 +1,28 @@
+{
+  "name": "knfapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "setup": "evershop install",
+    "build": "evershop build",
+    "start": "evershop start",
+    "start:debug": "evershop start --debug",
+    "dev": "evershop dev",
+    "user:create": "evershop user:create",
+    "user:changePassword": "evershop user:changePassword"
+  },
+  "dependencies": {
+    "@evershop/evershop": "^1.2.1",
+    "@evershop/google_login": "^1.1.0",
+    "@evershop/product_review": "^1.1.0",
+    "@evershop/resend": "^1.1.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "alipay-sdk": "^4.13.0",
+    "evershop_tidio_widget": "^1.0.5",
+    "react-router-dom": "^5.3.4"
+  },
+  "workspaces": [
+    "extensions/alipay",
+    "extensions/subscriptions"
+  ]
+}

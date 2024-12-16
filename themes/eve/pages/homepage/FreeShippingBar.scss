@@ -1,0 +1,7 @@
+.zoom-image {
+    transition: transform 0.5s ease;
+  }
+  
+  .zoom-image:hover {
+    transform: scale(1.1); /* 放大1.1倍 */
+  }

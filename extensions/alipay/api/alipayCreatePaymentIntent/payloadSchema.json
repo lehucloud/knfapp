@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string"
+    },
+    "payEnvironment": {
+      "type": "string"
+    }
+  },
+  "required": ["order_id"],
+  "additionalProperties": true,
+  "errorMessage": {
+    "properties": {
+      "order_id": "Order is invalid"
+    }
+  }
+}

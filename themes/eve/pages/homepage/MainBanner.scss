@@ -1,0 +1,46 @@
+
+.main-banner-home {
+  background-image: url("/main-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 390px;
+  position: relative;
+  
+  .container {
+    z-index: 10;
+  }
+  .button {
+    margin-top: 27px;
+  }
+  h2.h1 {
+    color: var(--primary);
+    letter-spacing: 0;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 5.5rem;
+      line-height: 6.5rem;
+    }
+  }
+}
+
+.bg-image {
+  background-image: linear-gradient(45deg, var(--c-yellow-2) 65%, var(--c-green-1) 30%);
+  background-image: -webkit-linear-gradient(45deg, var(--c-yellow-2) 65%, var(--c-green-1) 30%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+#app {
+  .header {
+    margin-bottom: 0;
+  }
+  .button {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+  }
+}

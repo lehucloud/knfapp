@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "out_trade_no": {
+      "type": "string"
+    }
+  },
+  "required": ["out_trade_no"],
+  "additionalProperties": true,
+  "errorMessage": {
+    "properties": {
+      "out_trade_no": "out_trade_no is invalid"
+    }
+  }
+}
