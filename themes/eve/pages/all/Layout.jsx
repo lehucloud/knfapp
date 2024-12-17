@@ -5,7 +5,7 @@ import "../../css/global.scss";
 import "./Layout.scss";
 import "./tailwind.scss";
 import {useState,useEffect} from 'react';
-import { getFrontStoreRoutes } from "@evershop/evershop/src/lib/router/Router";
+import Header from './Header';
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);

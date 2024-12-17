@@ -44,17 +44,17 @@ export default function MobileMenu({ menu: { items } }) {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link hover:underline" href={"/page/tickets"}>
+            <a className="nav-link hover:underline" href={"/tickets"}>
             车票
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link hover:underline" href={"/page/promotion"}>
+            <a className="nav-link hover:underline" href={"/promotion"}>
             推广
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link hover:underline" href={"/page/submitWorkOrder"}>
+            <a className="nav-link hover:underline" href={"/workorder"}>
             工单
             </a>
           </li>

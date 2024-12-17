@@ -16,10 +16,8 @@
     "@evershop/google_login": "^1.1.0",
     "@evershop/product_review": "^1.1.0",
     "@evershop/resend": "^1.1.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "alipay-sdk": "^4.13.0",
-    "evershop_tidio_widget": "^1.0.5",
-    "react-router-dom": "^5.3.4"
+    "evershop_tidio_widget": "^1.0.5"
   },
   "workspaces": [
     "extensions/alipay",

@@ -73,6 +73,60 @@ module.exports = {
       } else {
         return null;
       }
+    },
+    alipayReturnUrl: (setting, _, { user }) => {
+      const alipayConfig = getConfig('system.alipay', {});
+      if (alipayConfig.alipayReturnUrl) {
+        return '*******************************';
+      }
+      if (user) {
+        const alipayReturnUrl = setting.find(
+          (s) => s.name === 'alipayReturnUrl'
+        );
+        if (alipayReturnUrl) {
+          return alipayReturnUrl.value;
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
+    },
+    alipayGateway: (setting, _, { user }) => {
+      const alipayConfig = getConfig('system.alipay', {});
+      if (alipayConfig.alipayGateway) {
+        return '*******************************';
+      }
+      if (user) {
+        const alipayGateway = setting.find(
+          (s) => s.name === 'alipayGateway'
+        );
+        if (alipayGateway) {
+          return alipayGateway.value;
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
+    },
+    alipayNotifyUrl: (setting, _, { user }) => {
+      const alipayConfig = getConfig('system.alipay', {});
+      if (alipayConfig.alipayNotifyUrl) {
+        return '*******************************';
+      }
+      if (user) {
+        const alipayNotifyUrl = setting.find(
+          (s) => s.name === 'alipayNotifyUrl'
+        );
+        if (alipayNotifyUrl) {
+          return alipayNotifyUrl.value;
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
     }
   }
 };

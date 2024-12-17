@@ -88,6 +88,51 @@ export default function AlipayPayment({
           </div>
         </div>
       </Card.Session>
+      <Card.Session>
+        <div className="grid grid-cols-3 gap-8">
+          <div className="col-span-1 items-center flex">
+            <h4>Gateway</h4>
+          </div>
+          <div className="col-span-2">
+            <Field
+              type="text"
+              name="alipayGateway"
+              placeholder="Public Key"
+              value={alipayGateway}
+            />
+          </div>
+        </div>
+      </Card.Session>
+      <Card.Session>
+        <div className="grid grid-cols-3 gap-8">
+          <div className="col-span-1 items-center flex">
+            <h4>Notify Url</h4>
+          </div>
+          <div className="col-span-2">
+            <Field
+              type="text"
+              name="alipayNotifyUrl"
+              placeholder="Notify Url"
+              value={alipayNotifyUrl}
+            />
+          </div>
+        </div>
+      </Card.Session>
+      <Card.Session>
+        <div className="grid grid-cols-3 gap-8">
+          <div className="col-span-1 items-center flex">
+            <h4>Return Url</h4>
+          </div>
+          <div className="col-span-2">
+            <Field
+              type="text"
+              name="alipayReturnUrl"
+              placeholder="Return Url"
+              value={alipayReturnUrl}
+            />
+          </div>
+        </div>
+      </Card.Session>
     </Card>
   );
 }

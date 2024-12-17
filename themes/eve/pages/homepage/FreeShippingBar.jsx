@@ -8,22 +8,22 @@ function FreeShippingBar() {
         <div className="m-2 rounded border-divider overflow-hidden">
           {/* <h2>Free Shipping</h2>
           <p>Get Free Shipping on all orders over $75.</p> */}
-          <img src="http://localhost:3000/index/tab1.jpg" className="rounded zoom-image" alt="Free Shipping" />
+          <img src="/index/tab1.jpg" className="rounded zoom-image" alt="Free Shipping" />
         </div>
         <div className="m-2 rounded border-divider overflow-hidden">
           {/* <h2>Best Price</h2>
           <p>We offer the best prices on all our products.</p> */}
-          <img src="http://localhost:3000/index/tab2.jpg" className="rounded zoom-image" alt="Free Shipping" />
+          <img src="/index/tab2.jpg" className="rounded zoom-image" alt="Free Shipping" />
         </div>
         <div className="m-2 rounded border-divider overflow-hidden">
           {/* <h2>Great Service</h2>
           <p>Our customer service is available 24/7.</p> */}
-          <img src="http://localhost:3000/index/tab3.jpg" className="rounded zoom-image" alt="Free Shipping" />
+          <img src="/index/tab3.jpg" className="rounded zoom-image" alt="Free Shipping" />
         </div>
         <div className="m-2 rounded border-divider overflow-hidden">
           {/* <h2>Great Service</h2>
           <p>Our customer service is available 24/7.</p> */}
-          <img src="http://localhost:3000/index/tab4.jpg" className="rounded zoom-image" alt="Free Shipping" />
+          <img src="/index/tab4.jpg" className="rounded zoom-image" alt="Free Shipping" />
         </div>
       </div>
     </div>
