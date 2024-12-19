@@ -13,5 +13,5 @@ export default MainContext;
 
 export const layout = {
   areaId: "content",
-  sortOrder: 1,
+  sortOrder: 2,
 };

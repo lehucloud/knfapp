@@ -50,7 +50,7 @@ const getPayEnvironment = () => {
 };
 
   React.useEffect(() => {
-    
+
     const alipayCreatePayment = async () => {
       const response = await fetch(alipayCreatePaymentIntentAPI, {
         method: 'POST',
@@ -62,7 +62,7 @@ const getPayEnvironment = () => {
           payEnvironment: getPayEnvironment()
         })
       });
-      debugger
+      
       const data = await response.json();
       if (!response.error) {
         const requestUrl =data.data;
@@ -98,6 +98,7 @@ Alipay.propTypes = {
 export default function AlipayMethod({ alipayCreatePaymentIntentAPI }) {
 
   const checkout = useCheckout();
+  
   const { paymentMethods, setPaymentMethods, orderPlaced, orderId } = checkout;
   // Get the selected payment method
   const selectedPaymentMethod = paymentMethods
@@ -188,7 +189,7 @@ AlipayMethod.propTypes = {
 
 export const layout = {
   areaId: 'checkoutPaymentMethodalipay',
-  sortOrder: 40
+  sortOrder: 500
 };
 
 export const query = `

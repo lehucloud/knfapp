@@ -5,10 +5,13 @@ import "../../css/global.scss";
 import "./Layout.scss";
 import "./tailwind.scss";
 import {useState,useEffect} from 'react';
-import Header from './Header';
+
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const href = window.location.href
+  const isRoot = href.endsWith('/')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +31,7 @@ export default function Layout() {
   return (
     <>
       <LoadingBar />
-      <div className={`header ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
+      <div className={`${isRoot?'header-index':'header'} ${isScrolled ? 'bg-white text-black' : 'bg-transparent'}`}>
         <div className="page-width flex justify-between">
           <Area
             id="header"

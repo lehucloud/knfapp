@@ -42,18 +42,10 @@
             "height": 100
         },
         "headTags": {
-            "scripts": [
-                {
-                "src": "/custom.js",
-                "async": true
-                }
-            ],
-            "links": [
-                {
-                "rel": "stylesheet",
-                "href": "/custom.css"
-                }
-            ]
+            "google_analytics": {
+                "enabled": true,
+                "tracking_id": "UA-123456789-1"
+            }
         },
         "copyRight": "© 2025 Knfapp. All Rights Reserved."
     },
@@ -120,8 +112,8 @@
         {
             "name": "product_review",
             "resolve": "node_modules/@evershop/product_review",
-            "enabled": true,
-            "priority": 10
+            "enabled": false,
+            "priority": 100
         },
         {
             "name": "resend",

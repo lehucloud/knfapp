@@ -17,7 +17,6 @@ module.exports = async (request, response, delegate, next) => {
 
 
   const { out_trade_no, trade_status } = request.body;
-  debugger
   
   if (out_trade_no) {
 

@@ -7,6 +7,8 @@ import { Price } from "./_components/item/Price";
 import { Name } from "./_components/item/Name";
 import {Thumbnail} from "./_components/item/Thumbnail";
 import {CategoryWheel} from "./_components/CategoryWheel";
+import Button from '@components/common/form/Button';
+
 
 export default function FeaturedProducts({ collection }) {
   if (!collection) {
@@ -25,13 +27,13 @@ export default function FeaturedProducts({ collection }) {
 
         {/* <ProductList products={collection.products.items} countPerRow={1} /> */}
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
 
       {collection.products.items.map((product) => (
          
             <div
               key={product.productId}
-              className=" flex flex-col  bg-white p-2 rounded  border border-slate-100
+              className=" flex flex-col py-6 bg-white p-2 rounded  border border-slate-100
               bg-card text-card-foreground shadow size-full md:overflow-hidden rounded-lg hover:scale-105 transition-transform duration-200 ease-in-out
               md:justify-start justify-center items-center  md:space-y-2 md:p-4 md:rounded-lg md:border md:border-slate-100 md:shadow-md md:bg-white md:overflow-hidden 
       
@@ -50,10 +52,19 @@ export default function FeaturedProducts({ collection }) {
                   <span>已售:30283</span>
                   <Price  {...product.price} />
                 </div>
-
-                <button className="hover:underline hover:underline-offset-2 rounded ">
-                    购买
-                </button>
+                <div className="flex flex-col ">
+                <Button
+                className="rounded bg-transparent mx-4"
+                  title={_('BUY NOW')}
+                  outline
+                  url={product.url}
+                  onAction={() => {
+                    console.log('buy now');
+                  }}
+                />
+                
+                </div>
+               
               </div>
              
           ))}

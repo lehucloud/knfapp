@@ -38,7 +38,7 @@ function FeaturedCategories() {
 
 export default FeaturedCategories;
 
-export const layout = {
-  areaId: "content",
-  sortOrder: 15,
-};
+// export const layout = {
+//   areaId: "content",
+//   sortOrder: 15,
+// };
